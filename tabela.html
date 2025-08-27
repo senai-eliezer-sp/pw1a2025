@@ -4,37 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de tabelas</title>
+	<style>
+		body  {
+			background-color: white
+	}
+	</style>
+	
 </head>
 <body>
     <h1>Bem vindo a pagina de tabela</h1>
-    <h2 style="color: white"; >Navegação</h2>
+    <h2 style="color: black"; >Navegação</h2>
 	<ul>
 		<li
-		style="color: white"; >
+		style="color: black"; >
 			<a href="index.html" target="_blank">
 			Home
 			</a>
 		</li>
 		<li
-		style="color: white""; >
+		style="color: black""; >
 			<a href="fotos.html" target="_blank">
 		Fotos
 		</a>
 	</a>
 		</li>
 		<li
-		style="color: white"; >
+		style="color: black"; >
 				<a href="tabela.html" target="_blank">
 			Tabela
 		</a>
 		</li>
 		<li
-		style="color: white"; >
+		style="color: black"; >
 			<a href="formulario.html" target="_blank">
 				Formulario
 			</a>
 		</li>
  
 	</ul>
+	<table border="2">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>nome</th>
+				<th>altura</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Eliezer de souza</td>
+				<td>1.77</td>
+				<td>
+					<button>Editar admin</button>
+				</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>jose de souza</td>
+				<td>1.65</td>
+				<td>
+					<button>Excluir cliente</button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					Essa coluna está mesclada
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="3">
+					3,4,5
+				</td>
+				<td>joao miguel</td>
+				<td>1.85</td>
+				<td>
+					<button>Excluir cliente</button>
+				</td>
+			</tr>
+			<tr>
+				<td>fabio</td>
+				<td>1.80</td>
+				<td>
+					<button>Excluir cliente</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Nathalia</td>
+				<td>1.59</td>
+				<td>
+					<button>Excluir cliente</button>
+				</td> 
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Marcos</td>
+				<td>1.90</td>
+				<td>
+					<button><a href="https://facebook.com" target="_blank"</button>
+						Rede social
+					</a>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+
 </body>
 </html>
