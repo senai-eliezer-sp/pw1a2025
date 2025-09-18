@@ -1,0 +1,34 @@
+div { 
+    height: 220px;
+    background-color: rgb(19, 167, 167);
+    width: 220px;
+    font-size: 35px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+#oi{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(98, 196, 122);
+    color: black;
+    font-size: 25px;
+
+}
+.tchau{
+    border: 5px solid #000000;
+}
+.fundoPreto{
+    background-color: black;
+}
+.borda{
+    border: 10px dotted red;
+}
+.largo{
+    width: 350px;
+}
+#hello{
+    margin-top: 140px;
+    margin-left: 40px;
+    color: greenyellow;
+}
