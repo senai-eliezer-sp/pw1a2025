@@ -1,0 +1,29 @@
+.card {
+    border: 2px solid white;
+    width: 268px;
+    height: 474px;
+    background-color: mediumpurple;
+}
+.card-star{
+
+}
+.card-image{
+ display: flex;
+ justify-content: center; 
+ 
+}
+.card-description{
+    
+}
+.card-desconto{
+
+}
+.car-price{
+
+}
+.card-parcelamento{
+
+}
+.card-button-buy{
+
+}
