@@ -1,29 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+body {
+    background-color: grey; 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
 .card {
-    border: 2px solid white;
-    width: 268px;
-    height: 474px;
-    background-color: mediumpurple;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 25px 8px 24px rgb(82, 81, 81);
 }
-.card-star{
 
+.card-star {
+    position: relative;
+    color: #ff9900; 
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px; 
+    margin-bottom: 5px;
+    line-height: 1;
 }
-.card-image{
- display: flex;
- justify-content: center; 
- 
-}
-.card-description{
-    
-}
-.card-desconto{
 
+.card-image {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 5px;
 }
-.car-price{
 
+.card-image img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
-.card-parcelamento{
 
+.card-description {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #333;
+    margin-bottom: 5px;
+    min-height: 35px; 
+    font-weight: 500;
+    padding: 0 5px;
+    text-transform: uppercase;
 }
-.card-button-buy{
 
+.card-desconto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #888;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.card-desconto div:first-child { 
+    text-decoration: line-through;
+    color: #999;
+}
+
+.card-desconto div:last-child { 
+    color: #ff6600; 
+    font-weight: bold;
+}
+
+
+.card-price {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    margin-bottom: 5px;
+}
+
+.card-price > div:first-child { 
+    color: #ff6600; 
+    font-size: 24px;
+    font-weight: 900; 
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.card-price > div:last-child { 
+    font-size: 10px;
+    color: #fff;
+    background-color: #2196F3; 
+    padding: 2px 5px;
+    border-radius: 4px;
+    align-self: flex-start; 
+    font-weight: bold;
+    display: none; 
+}
+
+.card-parcelamento {
+    font-size: 12px;
+    color: #666;
+    padding: 0 5px;
+    line-height: 1.4;
+}
+
+.card-parcelamento strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.card-button-buy {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.card-button-buy button {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.card-button-buy button:hover {
+    background-color: #ff6600;
 }
