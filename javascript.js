@@ -58,7 +58,7 @@ var tempo = true
  if(tempo == true && dinheiro == true){
     alert("Viajo")
  }*/
-
+/*
     var saldo = prompt("Digite o Saldo que voce tem para viajar: ")
         if(saldo <= 499){
             alert("Voce nao vai para lugar nenhum.")    
@@ -72,3 +72,18 @@ var tempo = true
         }else if(saldo > 1001){
             alert("Voce consegue ir para o Nordeste.")
         }
+*/
+
+/*
+for(var i = 0; i <= 10; i++ ){
+    document.write("9 x " + i + " = " + i * 9 + "<br>" )
+}
+*/
+
+var tabuada = prompt("Digite a tabuada que voce quer ver: ")
+//var qtd = Number(prompt("Quantas tabuadas: "))
+for(var i = 0; i <= 10 ; i++){
+
+    if((i * tabuada) % 2 == 0)
+    document.write( tabuada + " x " + i + " = " + (i * tabuada)+ "<br>")
+}
