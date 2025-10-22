@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartela de bingo</title>
+
     <link rel="stylesheet" href="bingo.css">
+
 </head>
 <body>
     <table>
@@ -52,5 +54,44 @@
             </tr>
         </tbody>
     </table>
+<script>
+    var B = [] // 1-15
+    var I = [] // 16-30
+    var N = [] // 31-45
+    var G = [] // 46-60
+    var O = [] // 61-75
+
+    for(var i = 1; i <= 15; i++){
+        B.push(i)
+    }
+    for(var i = 16; i <= 30; i++){
+        B.push(i)
+    }
+    for(var i = 31; i < 45; i++){
+        B.push(i)
+    }
+    for(var i = 46; i <= 60; i++){
+        B.push(i)
+    }
+    for(var i = 61; i <= 75; i++){
+        B.push(i)
+    }
+    var SORTEIO = [] //1-75
+
+    for(var i = 1; i < 76; i++){
+        SORTEIO.push(i)
+    }
+
+    /*
+        Usando a lista N mostre apenas os numeros pares
+    */
+    for(var i = 1; 1 < 15; i++){
+        if(N[i] % 2 == 0){
+        document.write("O numero é: " + N[i] + "<br>" )
+        }
+    }
+   
+</script>
+
 </body>
 </html>
