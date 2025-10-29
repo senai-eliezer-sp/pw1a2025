@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="bingo.css">
 
 </head>
+
 <body>
     <table>
         <thead>
@@ -19,79 +21,97 @@
         </thead>
         <tbody>
             <tr>
-                <td>11</td> 
-                <td>24</td> 
-                <td>40</td> 
-                <td>60</td> 
+                <td>11</td>
+                <td>24</td>
+                <td>40</td>
+                <td>60</td>
                 <td>62</td>
             </tr>
             <tr>
-                <td>9</td> 
-                <td>26</td> 
-                <td>41</td> 
-                <td>47</td> 
+                <td>9</td>
+                <td>26</td>
+                <td>41</td>
+                <td>47</td>
                 <td>63</td>
             </tr>
             <tr>
-                <td>1</td> 
-                <td>30</td> 
-                <td><img src="imagens/coringa/coringa.png" width="40"></td> 
-                <td>48</td> 
+                <td>1</td>
+                <td>30</td>
+                <td><img src="imagens/coringa/coringa.png" width="40"></td>
+                <td>48</td>
                 <td>69</td>
             </tr>
             <tr>
-                <td>15</td> 
-                <td>17</td> 
-                <td>31</td> 
-                <td>54</td> 
+                <td>15</td>
+                <td>17</td>
+                <td>31</td>
+                <td>54</td>
                 <td>71</td>
-            </tr><tr>
-                <td>7</td> 
-                <td>18</td> 
-                <td>33</td> 
-                <td>56</td> 
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>18</td>
+                <td>33</td>
+                <td>56</td>
                 <td>75</td>
             </tr>
         </tbody>
     </table>
-<script>
-    var B = [] // 1-15
-    var I = [] // 16-30
-    var N = [] // 31-45
-    var G = [] // 46-60
-    var O = [] // 61-75
+    <script>
 
-    for(var i = 1; i <= 15; i++){
-        B.push(i)
-    }
-    for(var i = 16; i <= 30; i++){
-        B.push(i)
-    }
-    for(var i = 31; i < 45; i++){
-        B.push(i)
-    }
-    for(var i = 46; i <= 60; i++){
-        B.push(i)
-    }
-    for(var i = 61; i <= 75; i++){
-        B.push(i)
-    }
-    var SORTEIO = [] //1-75
+        var B = PreencherLista(1, 15) // 1-15
+        var I = PreencherLista(16, 31) // 16-30
+        var N = PreencherLista(31, 45) // 31-45
+        var G = PreencherLista(46, 60) // 46-60
+        var O = PreencherLista(61, 75) // 61-75
+        var SORTEIO = PreencherLista(1, 75) // 61-75
 
-    for(var i = 1; i < 76; i++){
-        SORTEIO.push(i)
-    }
-
-    /*
-        Usando a lista N mostre apenas os numeros pares
-    */
-    for(var i = 1; 1 < 15; i++){
-        if(N[i] % 2 == 0){
-        document.write("O numero é: " + N[i] + "<br>" )
+        function PreencherLista(inicial, final) {
+            var listaRetorno = []
+            for (var i = inicial; i <= final; i++) {
+                listaRetorno.push(i)
+            }
+            return listaRetorno
         }
-    }
-   
-</script>
+
+        function ParOuImpar(numero) {
+            if (numero % 2 == 0) {
+                return "Par"
+            } else {
+                return "Impar"
+            }
+        }
+
+        /*  
+            Faça uma função que receba uma
+            lista e mostre ela
+            em um documento.write com h1.
+            em seguida execute para todas
+            as listas que voce preencheu        
+        */
+
+        function ExibirLista(Lista) {
+            document.write("<h1>"+Lista+"</h1> <br>")
+        }  
+        
+        function ExibirListaDetalhada(Lista){
+            for(var i = 0; i < Lista.length; i++){
+                document.write("<h1>"+Lista[i]+"</h1>")
+            }
+        }
+
+
+        ExibirLista(B)
+        ExibirLista(I)
+        ExibirLista(N)
+        ExibirLista(G)
+        ExibirLista(O)
+        ExibirLista(SORTEIO)
+
+
+         
+    </script>
 
 </body>
+
 </html>
