@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar CEP</title>
+    <link rel="stylesheet" href="cep.css">
+</head>
+<body>
+        <div class="formulario">
+            <h1>Consulta seu CEP</h1>
+            <label id="labelcep">CEP</label>
+            <input type="text" id="cep"/>
+            <label>Endereço</label>
+            <input type="text" id="endereco"/>
+            <label>Bairro</label>
+            <input type="text" id="bairro"/>
+            <label>Cidade</label>
+            <input type="text" id="cidade"/>
+            <label>Estado</label>
+            <input type="text" id="estado"/>
+            <button onclick="verdados()">
+                <b>Consultar</b>
+            </button>
+        </div>
+    <script>
+        function verdados(){
+            var cep = document.getElementById("cep")
+            var endereco = document.getElementById("endereco")
+            var bairro = document.getElementById("bairro")
+            var cidade = document.getElementById("cidade")
+            var estado = document.getElementById("estado")
+
+            estado.value = "oii deu certo"
+            cidade.style.backgroundColor = 'blue'
+            bairro.style.border = '2px solid blue'
+            endereco.type = 'number'    
+        }
+         if (cep.value == ""){
+            var labelcep = document.getElementById("labelcep")
+            labelcep.innerHTML= "cep - <span class = 'erro'> Esse campo não pode estar em branco</span>"
+
+         }
+         else{
+            var labelcep = document.getElementById("labelcep")
+            labelcep.innerHTML = "cep"
+         }
+    </script>
+</body>
+</html>

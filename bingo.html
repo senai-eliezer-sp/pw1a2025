@@ -66,6 +66,17 @@
         var O = PreencherLista(61, 75) // 61-75
         var SORTEIO = PreencherLista(1, 75) // 61-75
 
+        function numeroaleatorio(min, max) {
+            var numero = Math.random() * max
+            numero = Math.floor(numero)
+            if (numero >= min) {
+                return numero
+            } else {
+                numeroaleatorio(min, max)
+            }
+
+        }
+
         function PreencherLista(inicial, final) {
             var listaRetorno = []
             for (var i = inicial; i <= final; i++) {
@@ -73,58 +84,37 @@
             }
             return listaRetorno
         }
-
         function ParOuImpar(numero) {
             if (numero % 2 == 0) {
-                return "Par"
+                return "par"
             } else {
-                return "Impar"
+                return "impar"
             }
         }
-
-
-        /*  
-        Faça uma função que receba uma
-        lista e mostre ela
-        em um documento.write com h1.
-        em seguida execute para todas
-            as listas que voce preencheu        
-            */
-
-        // function ExibirLista(Lista) {
-        //     document.write("<h1>"+Lista+"</h1> <br>")
-        // }  
-
-        // function ExibirListaDetalhada(Lista){
-        //     for(var i = 0; i < Lista.length; i++){
-        //         document.write("<h1>"+Lista[i]+"</h1>")
-        //     }
-        // }
-
-
-        ExibirLista(B)
-        ExibirLista(I)
-        ExibirLista(N)
-        ExibirLista(G)
-        ExibirLista(O)
-        ExibirLista(SORTEIO)
-
-        function Marcar(elementoClicado) {
-            
-            elementoClicado.innerText =  NumeroAleatorio()
-
+        function mostrarlista(lista) {
+            return document.write("<h1>" + lista + "</h1> <br>")
         }
-
-        function NumeroAleatorio(min, max) {
-            var numero = Math.random() * 75
-            numero = Math.floor(numero)
-            if(numero >= min){
-                return numero
-            }else{
-                return NumeroAleatorio(min, max)
+        function mostrarlistadetalhada(lista) {
+            for (var i = 0; i < lista.length; i++) {
+                return document.write("<h1>" + lista[i] + "</h1>")
             }
         }
+        mostrarlistadetalhada(B)
+        mostrarlistadetalhada(I)
+        mostrarlistadetalhada(N)
+        mostrarlistadetalhada(G)
+        mostrarlistadetalhada(O)
+        mostrarlistadetalhada(SORTEIO)
 
+        function Marcar(elementoclicado) {
+            //if(elementoclicado.style.backgroundColor == "purple"){
+            //elementoclicado.style.backgroundColor = "yellow"
+            //}else
+            //{
+            //    elementoclicado.style.backgroundColor = "purple"
+            // }
+            elementoclicado.innerText = numeroaleatorio()
+        }
     </script>
 
 </body>

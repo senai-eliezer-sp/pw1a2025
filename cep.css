@@ -1,0 +1,34 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    width: 280px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+label{
+    display: block;
+}
+input{
+    display: block;
+}
+button{
+    margin: 5px;
+    border-radius: 6px;
+    width: 30%;
+    background-color: darkcyan;
+    cursor: pointer;
+}
+.erro{
+    color: red;
+}
