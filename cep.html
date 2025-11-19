@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar CEP</title>
     <link rel="stylesheet" href="cep.css">
 </head>
+
 <body>
-        <div class="formulario">
-            
-            <h1>Consulta seu CEP</h1>
-            <input type="CEP" id="cep" placeholder="CEP"/>
-            <input type="text" id="endereco"placeholder="Endereço"/>
-            <input type="text" id="bairro"  placeholder="Bairro">
-            <input type="text" id="cidade"  placeholder="Cidade">
-            <input type="text" id="estado"  placeholder="Estado">
-            <button onclick="verdados()">
-                <b>Consultar</b>
-            </button>
-        </div>
+    <div class="formulario">
+
+        <h1>Consulta seu CEP</h1>
+        <input type="CEP" id="cep" placeholder="CEP" />
+        <input type="text" id="endereco" placeholder="Endereço" />
+        <input type="text" id="bairro" placeholder="Bairro">
+        <input type="text" id="cidade" placeholder="Cidade">
+        <input type="text" id="estado" placeholder="Estado">
+        <button onclick="verdados()">
+            <b>Consultar</b>
+        </button>
+    </div>
     <script>
-        // function verdados(){
-        //     var cep = document.getElementById("cep")
-        //     var endereco = document.getElementById("endereco")
-        //     var bairro = document.getElementById("bairro")
-        //     var cidade = document.getElementById("cidade")
-        //     var estado = document.getElementById("estado")
+        function verdados() {
+            var cep = document.getElementById("cep")
+            var endereco = document.getElementById("endereco")
+            var bairro = document.getElementById("bairro")
+            var cidade = document.getElementById("cidade")
+            var estado = document.getElementById("estado")
+            
+            var url = "https://viacep.com.br/ws/"+cep.value+"/json/"
+            fetch(url)
+            .then((response => response.json()))
+            .then((dados) => {
+                endereco.value = dados.logradouro
+                bairro.value = dados.bairro
+                cidade.value = dados.localidade
+                estado.value = dados.estado
+            })
 
-        //     estado.value = "oii deu certo"
-        //     cidade.style.backgroundColor = 'blue'
-        //     bairro.style.border = '2px solid blue'
-        //     endereco.type = 'number'    
-        // }
-        // if (cep.value == ""){
-        //     var labelcep = document.getElementById("labelcep")
-        //     labelcep.innerHTML= "cep - <span class = 'erro'> Esse campo não pode estar em branco</span>"
+            //     estado.value = "oii deu certo"
+            //     cidade.style.backgroundColor = 'blue'
+            //     bairro.style.border = '2px solid blue'
+            //     endereco.type = 'number'    
+            // }
+            // if (cep.value == ""){
+            //     var labelcep = document.getElementById("labelcep")
+            //     labelcep.innerHTML= "cep - <span class = 'erro'> Esse campo não pode estar em branco</span>"
 
-        //  }
-        //  else{
-        //     var labelcep = document.getElementById("labelcep")
-        //     labelcep.innerHTML = "cep"
-        //  }
+            //  }
+            //  else{
+            //     var labelcep = document.getElementById("labelcep")
+            //     labelcep.innerHTML = "cep"
+            // 
+        }
     </script>
 </body>
+
 </html>
